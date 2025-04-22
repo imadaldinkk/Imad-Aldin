@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Imad Aldin | Resume</title>
+		<style>
+			h1,
+			h2,
+			h3 {
+				color: black;
+			}
+			p {
+				color: black;
+			}
+			li {
+				color: black;
+			}
+			html,
+			body {
+				background-color: rgb(230, 227, 227);
+				padding: 20px;
+				height: 100%;
+				font-family: Cambria, Cochin, Georgia, Times, "Times New Roman",
+					serif;
+			}
+			img {
+				src: local("/Photo.jpg");
+				border-radius: 15px;
+				float: left;
+				margin-right: 10px;
+			}
+			.container {
+				display: flex;
+				justify-content: space-between;
+				align-items: stretch;
+				padding: 2vh;
+				height: auto;
+				max-height: 50%;
+				width: auto;
+				max-width: 100%;
+				flex-wrap: wrap;
+			}
+			.leftbox {
+				display: flex;
+				justify-content: left;
+				align-items: center;
+				height: auto;
+				width: auto;
+				flex: 1;
+				margin: 5px;
+				background-color: rgba(255, 255, 255, 0.9);
+				border-radius: 40px 60px 40px 60px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+				transition: all 0.6s ease;
+			}
+			.leftbox:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 50px 80px rgba(0, 0, 0, 0.4);
+				background-color: #e6e1c5;
+				scale: 1.05;
+			}
+			.image {
+				margin-left: 25px;
+			}
+			.name {
+				margin-left: 10px;
+			}
+			.name a {
+				color: black;
+			}
+			.Contact {
+				font-size: 16px;
+				height: auto;
+				width: auto;
+				margin: 5px;
+				background-color: rgba(255, 255, 255, 0.9);
+				border-radius: 25% 10%;
+				text-align: left;
+				padding: 20px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+				transition: all 0.6s ease;
+			}
+			.Contact:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 50px 80px rgba(0, 0, 0, 0.4);
+				background-color: #e6e1c5;
+				scale: 1.05;
+			}
+			.Contact h3 {
+				color: black;
+			}
+			.Contact p {
+				color: black;
+			}
+			.Contact a {
+				color: black;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+				white-space: normal;
+			}
+			@media (max-width: 480px) {
+				.container {
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+			.aboutme {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				padding: 25px;
+				margin: 20px;
+				height: auto;
+				width: auto;
+				background-color: rgba(255, 255, 255, 0.9);
+				border-radius: 40px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+				transition: all 0.6s ease;
+			}
+			.aboutme:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 50px 80px rgba(0, 0, 0, 0.4);
+				background-color: #e6e1c5;
+				scale: 1.05;
+			}
+			.aboutme h3 {
+				margin: 2px;
+			}
+			.aboutme p {
+				margin: 5px;
+			}
+			@media (max-width: 768px) {
+				.aboutme {
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+			.thirdline {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				padding: 20px;
+				height: auto;
+				width: auto;
+			}
+			.education {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
+				margin: 5px;
+				height: auto;
+				width: auto;
+				background-color: rgba(255, 255, 255, 0.9);
+				border-radius: 40px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+				transition: all 0.6s ease;
+			}
+			.education:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 50px 80px rgba(0, 0, 0, 0.4);
+				background-color: #e6e1c5;
+				scale: 1.05;
+			}
+			.education h3 {
+				margin: 2.5px;
+			}
+			.education li {
+				margin: 2.5px;
+			}
+			.skills {
+				display: flex;
+
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				float: right;
+				padding: 20px;
+				margin: 5px;
+				height: auto;
+				width: auto;
+				background-color: rgba(255, 255, 255, 0.9);
+				border-radius: 40px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+				transition: all 0.6s ease;
+			}
+			.skills:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 50px 80px rgba(0, 0, 0, 0.4);
+				background-color: #e6e1c5;
+				scale: 1.05;
+			}
+			.skills h3 {
+				margin: 2.5px;
+			}
+			.skills li {
+				margin: 2.5px;
+			}
+			.hobbies {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				float: right;
+				padding: 20px;
+				margin: 5px;
+				height: auto;
+				width: auto;
+				background-color: rgba(255, 255, 255, 0.9);
+				border-radius: 40px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+				transition: all 0.6s ease;
+			}
+			.hobbies:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 50px 80px rgba(0, 0, 0, 0.4);
+				background-color: #e6e1c5;
+				scale: 1.05;
+			}
+			.hobbies h3,
+			p {
+				margin: 1px;
+			}
+			.hobbies li {
+				margin: 1px;
+			}
+			@media (max-width: 768px) {
+				.thirdline {
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+			.fourthline {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				padding: 20px;
+				height: auto;
+				width: auto;
+			}
+
+			.volunteer {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
+				margin: 5px;
+				height: auto;
+				width: auto;
+				background-color: rgba(255, 255, 255, 0.9);
+				border-radius: 40px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+				transition: all 0.6s ease;
+			}
+			.volunteer:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 50px 80px rgba(0, 0, 0, 0.4);
+				background-color: #e6e1c5;
+				scale: 1.05;
+			}
+			.volunteer h3 {
+				margin: 10px;
+			}
+			.volunteer h4,
+			p {
+				margin: 7px;
+			}
+			.achievements {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				float: right;
+				padding: 20px;
+				margin: 5px;
+				height: auto;
+				width: auto;
+				background-color: rgba(255, 255, 255, 0.9);
+				border-radius: 40px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+				transition: all 0.6s ease;
+			}
+			.achievements:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 50px 80px rgba(0, 0, 0, 0.4);
+				background-color: #e6e1c5;
+				scale: 1.05;
+			}
+			.achievements p,
+			a {
+				color: black;
+			}
+			@media (max-width: 768px) {
+				.fourthline {
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+			::selection {
+				color: #ba3b46;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="entire">
+			<div class="container">
+				<div class="leftbox">
+					<div class="image">
+						<img src="/Photo.jpg" alt="" height="150px" />
+					</div>
+					<div class="name">
+						<h1>K K Mohamed Imad Aldin</h1>
+						<p>Aspiring Entrepreneur</p>
+						<p>
+							<a href="https://www.iimb.ac.in/">IIM Bangalore</a>
+							BBA DBE Student
+						</p>
+					</div>
+				</div>
+				<div class="Contact">
+					<h3>Contact</h3>
+					<p>
+						LinkedIn :
+						<a href="https://www.linkedin.com/in/mhdimadaldin"
+							>K K Mohamed Imad Aldin</a
+						>
+					</p>
+					<p>Gmail : kkmhdimadaldin@gmail.com</p>
+					<p>Phone : 9486100525</p>
+				</div>
+			</div>
+
+			<div class="aboutme">
+				<h3>About Me</h3>
+				<br />
+				<p>
+					Passionate about business, economics, and geopolitics, with
+					a strong foundation in entrepreneurial thinking through the
+					BBA (DBE) program at IIM Bangalore. Former Junior Red Cross
+					(JRC) cadet, reflecting early leadership, discipline, and a
+					service mindset. Creates self-help and educational content
+					on YouTube and Instagram, steadily building a personal
+					brand. Enjoys thinking about business operations and
+					strategies, and occasionally explores creative ideas and
+					solutions in theory.
+				</p>
+			</div>
+
+			<div class="thirdline">
+				<div class="education">
+					<h3>Education</h3>
+					<div>
+						<ul>
+							<li>BBA DBE :-</li>
+							<ul>
+								<li>
+									1st Year BBA DBE student at IIM Bangalore
+								</li>
+							</ul>
+							<li>Class 12 :-</li>
+							<ul>
+								<li>MH English School, Edappal</li>
+								<li>Commerce - 88.33%</li>
+							</ul>
+							<li>Class 10:-</li>
+							<ul>
+								<li>D.H.H.S.S Edappal</li>
+								<li>Marks : 90%</li>
+							</ul>
+						</ul>
+					</div>
+				</div>
+				<div class="skills">
+					<h3>Skills</h3>
+					<ul>
+						<li>Leadership</li>
+						<li>Marketing</li>
+						<li>Communication</li>
+						<li>Critical Thinking</li>
+						<li>Presentation Skills</li>
+						<li>HTML</li>
+						<li>CSS</li>
+					</ul>
+				</div>
+				<div class="hobbies">
+					<h3>Interests and Hobbies</h3>
+					<ul>
+						<li><p>Travelling</p></li>
+						<li><p>Forest Safaris</p></li>
+						<li><p>Reading</p></li>
+						<li><p>Attending Business Expos</p></li>
+						<li>
+							<p>Learning Economics, Politics and Business</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="fourthline">
+				<div class="volunteer">
+					<h3>Volunteering and Extracurricullar Acitivities</h3>
+
+					<h4>Content Creation</h4>
+
+					<p>
+						Develops and shares engaging content on learning and
+						self-improvement across
+						<a
+							href="https://youtube.com/@imadaldinkk?si=VoMjcX7lTWsLTlmi"
+							>YouTube</a
+						>
+						and
+						<a href="https://www.instagram.com/imadaldin_kk/"
+							>Instagram</a
+						>
+					</p>
+
+					<h4>Coordinator - KPSA Fest</h4>
+
+					<p>
+						Coordinated KPSA Fest - a shool level fest for 3 days
+						and ensured smooth conduct
+					</p>
+
+					<h4>Volunteer, Annual Fest</h4>
+
+					<p>
+						Assisted in organizing the school's Annual Day, managing
+						backstage activities.
+					</p>
+
+					<h4>JRC Member</h4>
+
+					<p>
+						Participated in community service activities as an
+						active JRC member in class 8.
+					</p>
+
+					<h4>Bharat Scout</h4>
+
+					<p>
+						Developed early leadership and survival skills as a
+						member of Bharat Scouts and Guides in class 5.
+					</p>
+				</div>
+				<div class="achievements">
+					<h3>Achievements and Rewards</h3>
+
+					<p>Full A+ in Class 10 SSLC</p>
+					<p>88.33% in Class 12 Commerce Stream</p>
+					<p><a href="https://www.jrckerala.org/">JRC</a> C Level</p>
+					<p>Second Prize for English Speech at School Arts Fest</p>
+					<p>A+ in State Level Essay Writing Competition</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
